@@ -1,37 +1,36 @@
-<!DOCTYPE HTML>
-<html>
-<head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# article: http://ogp.me/ns/article#">
-  <title>Troy Swanson | {{ page.title }}</title>
-  <link rel="author" href="https://plus.google.com/112834200360888970972">
-  <meta property="article:published_time" content="{{ page.date | date_to_xmlschema }}">
-  <meta property="article:author" content="https://www.facebook.com/gerphimum">
-  <meta property="article:section" content="developer">
-  <meta property="og:url" content="{{ site.url }}{{ page.url }}">
-  <meta property="og:type" content="article">
-  <meta property="og:title" content="{{ page.title }}">
-  <meta property="og:locale" content="en_US">
-  <meta property="og:image" content="{{ site.url }}/img/portrait.png">
-  <meta property="og:description" content="{{ site.excerpt }}">
-  <meta property="og:site_name" content="Troy Swanson">
-  {% include head.html %}
-</head>
-<body>
-  <div class="pure-g-r">
-    <div class="pure-u-1-4">
-      {% include sidebar.html %}
-    </div>
-    <div class="pure-u-3-4">
-      <article vocab="http://schema.org/" typeof="BlogPosting" resource="{{ page.url }}">
-        <h1 property="name">{{ page.title }}</h1>
-        <ul class="meta">
-          <li class="pubdate"><time property="datePublished" datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date_to_string }}</time></li>
-          <li class="permalink"><a property="url" href="{{ site.url }}{{ page.url }}" title="Permalink">∞</a></li>
-        </ul>
-        <div class="body" property="articleBody">
-          {{ content }}
-        </div>
-      </article>
-    </div>
+---
+layout: default
+---
+
+<article class="single">
+  <span class="date">{{ page.date | date_to_string }}</span>
+  <h1>{{ page.title }}</h1>
+  <div class="post">
+  {{ content }}
   </div>
-</body>
-</html>
+
+<div class="share"><a href="https://twitter.com/share" class="twitter-share-button" data-via="mikowl" data-size="medium">Tweet</a><div class="g-plusone"></div></div>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+
+<script type="text/javascript">
+  (function() {
+    var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+    po.src = 'https://apis.google.com/js/plusone.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+  })();
+</script>
+</article>
+
+{{% if page.comments %}}
+<div id="disqus_thread"></div>
+
+<!-- Discuss -->
+<script type="text/javascript">
+  var disqus_shortname = 'mikowl';
+  (function() {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+</script>
+{{% endif %}}
