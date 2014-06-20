@@ -1,1 +1,6 @@
-baseurl:http://siweng.github.io/
+permalink: pretty
+
+markdown: redcarpet
+redcarpet:
+  extensions: [smart]
+
