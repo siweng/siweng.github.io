@@ -25,9 +25,9 @@ execute pathogen#infect()
 cd ~/.vim/bundle
 git clone https://github.com/scrooloose/nerdtree.git
 {% endhighlight %}
-为nerdtree添加调用快捷键，添加以下命令到`~/.vimrc文件`
+为nerdtree添加调用快捷键，添加以下命令到`~/.vimrc`文件
 {% highlight bash %}
-"添加快捷键映射到nerdtree
+"添加快捷键映射到nerdtree"
 map <C-n> :NERDTreeToggle<CR>
 {% endhighlight %}
 重启vim，按ctrl+n键呼起nerdtree窗口，默认在vim视图的左侧
