@@ -45,7 +45,10 @@ map <Leader>n <plug>NERDTreeTabsToggle<CR>
 {% endhighlight %}
 重启Vim， 按住`\+n`键呼出目录树，但此目录树可以在多个tab中共用，表现一致。
 
-test
+###安装git-nerdtree插件
+如果你使用git做项目版本管理的话，建议安装[git-nerdtree](https://github.com/Xuyuanp/git-nerdtree)
+官方的效果图：
+<img src="https://camo.githubusercontent.com/3fe0388df11cb787f36e1fa108398fd3f757eef4/687474703a2f2f692e696d6775722e636f6d2f6a534377476a552e6769663f31" alt="git-nerdtree" />
 
 
 
