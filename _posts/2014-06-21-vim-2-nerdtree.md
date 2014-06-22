@@ -1,7 +1,7 @@
 ---
 layout: post
 published: true
-title: Vim每日一篇：为Vim搭建目录树
+title: Vim每日一篇(2)：为Vim搭建目录树
 date: 2014-06-21
 tags: vim nerdtree
 ---
@@ -54,7 +54,9 @@ map <Leader>n <plug>NERDTreeTabsToggle<CR>
 cd ~/.vim/bundle
 git clone https://github.com/Xuyuanp/git-nerdtree.git
 {% endhighlight%}
-重启vim之后，nerdtree目录树文件前面多了一些标示符，各个标识符的含义
+重启vim之后，把目录根节点切换到本地仓库，你就会发现nerdtree目录树文件前面多了一些符号，各个标识符的含义
+
+<img src="/images/2014-06-21/nerdtree-git.png" alt="nerdtree-git" />
 
 	* `✭` / `*` : Untracked
 
