@@ -49,7 +49,7 @@ www.dropbox.com.	20803	IN	A	59.24.3.173
 ;; MSG SIZE  rcvd: 49
 {% endhighlight %}
 
-电信DNS服务器(114.114.114.114)对www.dropbox.com的解析情况
+电信DNS服务器(`114.114.114.114`)对`www.dropbox.com`的解析情况
 {% highlight bash %}
 [root@AY140601130849615931Z dnscrypt-proxy-1.4.0]# dig www.dropbox.com @114.114.114.114
 
@@ -70,3 +70,8 @@ www.dropbox.com.	31596	IN	A	59.24.3.173
 ;; WHEN: Sun Jun 22 15:44:33 2014
 ;; MSG SIZE  rcvd: 49
 {% endhighlight %}
+
+`www.dropbox.com`均被解析到 `59.24.3.173` 这个IP, 这是一个韩国IP，使用站长[ping工具](http://ping.chinaz.com/)看一下
+<img src="/images/2014-06-22/ping-ip.png" alt="ping:59.24.3.173" />
+
+
