@@ -45,5 +45,7 @@ map <Leader>n <plug>NERDTreeTabsToggle<CR>
 {% endhighlight %}
 重启Vim， 按住`\+n`键呼出目录树，但此目录树可以在多个tab中共用，表现一致。
 
+test
+
 
 
