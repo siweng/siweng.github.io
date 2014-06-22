@@ -56,19 +56,19 @@ git clone https://github.com/Xuyuanp/git-nerdtree.git
 {% endhighlight%}
 重启vim之后，nerdtree目录树文件前面多了一些标示符，各个标识符的含义
 
-* `✭` / `*` : Untracked
+	* `✭` / `*` : Untracked
 
-* `✹` / `~` : Modified in the working tree
+	* `✹` / `~` : Modified in the working tree
 
-* `✚` / `+` : Staged in the index (Exclude Renamed status)
+	* `✚` / `+` : Staged in the index (Exclude Renamed status)
 
-* `➜` / `»` : Renamed
+	* `➜` / `»` : Renamed
 
-* `═` / `=` : Unmerged
+	* `═` / `=` : Unmerged
 
-* `✖` / `-` : Deleted (This indicator can't be shown, as NERDTree doesn't display deleted files. I have no prefect idea to solve this problem currently.)
+	* `✖` / `-` : Deleted (This indicator can't be shown, as NERDTree doesn't display deleted files. I have no prefect idea to solve this problem currently.)
 
-* `✗` / `×` : Dirty (Only for directory)
+	* `✗` / `×` : Dirty (Only for directory)
 
-* `✔` / `ø` : Clean (Only for root directory)
+	* `✔` / `ø` : Clean (Only for root directory)
 
