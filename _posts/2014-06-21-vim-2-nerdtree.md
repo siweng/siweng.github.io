@@ -30,5 +30,20 @@ git clone https://github.com/scrooloose/nerdtree.git
 "添加快捷键映射到nerdtree"
 map <C-n> :NERDTreeToggle<CR>
 {% endhighlight %}
-重启vim，按ctrl+n键呼起nerdtree窗口，默认在vim视图的左侧
+重启vim，按ctrl+n键呼起nerdtree窗口，默认在vim视图的左侧。
+
+
+###安装nerdtree-tab插件
+安装nerdtree之后，并未大功告成，你会发现，使用nerdtree在新tab中打开文件时，nerdtree目录树竟然不能共用，每次都需要按`ctrl+n`快捷键呼出目录树，当然[vim-nerdtree-tab](https://github.com/jistr/vim-nerdtree-tabs)这款插件解决了这个问题，安装也很简单，也是通过pathogen来管理
+{% highlight bash %}
+cd ~/.vim/bundle
+git clone https://github.com/jistr/vim-nerdtree-tabs.git
+{% endhighlight %}
+添加快捷键映射至`~/.vimrc`配置文件中
+{% hightlight bash %}
+map <Leader>n <plug>NERDTreeTabsToggle<CR>
+{% endhilight %}
+重启Vim， 按住`\+n`键呼出目录树，但此目录树可以在多个tab中共用，表现一致。
+
+
 
