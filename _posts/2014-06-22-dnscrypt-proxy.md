@@ -27,7 +27,7 @@ DNS污染症状：目前一些被禁止访问的网站很多就是通过DNS污�
 
 对于DNS污染，普通用户是不能够通过简单地设置国外DNS服务器就能解决的。需要用到这篇所讲的重点：DnsCrypt-proxy，我通过这种方式解决了对Dropbox的访问封锁。
 
-先看下谷歌服务器与电信服务器对www.dropbox.com的解析情况
+先看下谷歌DNS服务器(8.8.8.8)对www.dropbox.com的解析情况
 {% highlight bash %}
 [root@AY140601130849615931Z dnscrypt-proxy-1.4.0]# dig www.dropbox.com @8.8.8.8
 
@@ -46,5 +46,27 @@ www.dropbox.com.	20803	IN	A	59.24.3.173
 ;; Query time: 5 msec
 ;; SERVER: 8.8.8.8#53(8.8.8.8)
 ;; WHEN: Sun Jun 22 15:44:22 2014
+;; MSG SIZE  rcvd: 49
+{% endhighlight %}
+
+电信DNS服务器(114.114.114.114)对www.dropbox.com的解析情况
+{% highlight bash %}
+[root@AY140601130849615931Z dnscrypt-proxy-1.4.0]# dig www.dropbox.com @114.114.114.114
+
+; <<>> DiG 9.8.2rc1-RedHat-9.8.2-0.23.rc1.el6_5.1 <<>> www.dropbox.com @114.114.114.114
+;; global options: +cmd
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 41685
+;; flags: qr rd ra; QUERY: 1, ANSWER: 1, AUTHORITY: 0, ADDITIONAL: 0
+
+;; QUESTION SECTION:
+;www.dropbox.com.		IN	A
+
+;; ANSWER SECTION:
+www.dropbox.com.	31596	IN	A	59.24.3.173
+
+;; Query time: 30 msec
+;; SERVER: 114.114.114.114#53(114.114.114.114)
+;; WHEN: Sun Jun 22 15:44:33 2014
 ;; MSG SIZE  rcvd: 49
 {% endhighlight %}
