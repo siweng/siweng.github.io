@@ -5,5 +5,5 @@ domain: me.siweng.com
 pygments: true
 permalink: /:year/:title/
 paginate: 3
-author: Michael Elias
+author: Siweng 
 exclude: [config.rb, Rakefile]
