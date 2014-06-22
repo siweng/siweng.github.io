@@ -14,7 +14,7 @@ mkdir -p ~/.vim/autoload ~/.vim/bundle
 curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
 {% endhighlight %}
 autoload目录是vim默认加载插件的目录，用来存在pathogen.vim插件，bundle目录是用来存放其它插件，
-添加以下命令到~/.vimrc (.vimrc若不存在，创建一个)
+添加以下命令到~/.vimrc 开启pathogen插件(.vimrc若不存在，创建一个)
 {% highlight bash %}
 execute pathogen#infect()
 {% endhighlight %}
@@ -24,6 +24,11 @@ execute pathogen#infect()
 {% highlight bash %}
 cd ~/.vim/bundle
 git clone https://github.com/scrooloose/nerdtree.git
+{% endhighlight %}
+为nerdtree添加调用快捷键，添加以下命令到`~/.vimrc文件`
+{% highlight bash %}
+"添加快捷键映射到nerdtree
+map <C-n> :NERDTreeToggle<CR>
 {% endhighlight %}
 重启vim，按ctrl+n键呼起nerdtree窗口，默认在vim视图的左侧
 
