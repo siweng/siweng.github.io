@@ -187,5 +187,5 @@ www.v.dropbox.com.	7	IN	A	108.160.165.147
 ;; MSG SIZE  rcvd: 105
 {% endhighlight  %}
 
-访问以下 https://www.dropbox.com
+访问一下 https://www.dropbox.com
 <img src="/images/2014-06-22/dropbox.png" alt="dropbox" />
