@@ -50,7 +50,7 @@ map <Leader>n <plug>NERDTreeTabsToggle<CR>
 官方的效果图：
 <img src="https://camo.githubusercontent.com/3fe0388df11cb787f36e1fa108398fd3f757eef4/687474703a2f2f692e696d6775722e636f6d2f6a534377476a552e6769663f31" alt="git-nerdtree" />
 执行以下命令安装
-{% hightlight bash %}
+{% highlight bash %}
 cd ~/.vim/bundle
 git clone https://github.com/Xuyuanp/git-nerdtree.git
 {% endhighlight%}
