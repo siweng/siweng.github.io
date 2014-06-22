@@ -15,7 +15,9 @@ curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
 {% endhighlight %}
 autoload目录是vim默认加载插件的目录，用来存在pathogen.vim插件，bundle目录是用来存放其它插件，
 添加以下命令到~/.vimrc (.vimrc若不存在，创建一个)
-`execute pathogen#infect()`
+{% highlight bash %}
+execute pathogen#infect()
+{% endhighlight %}
 
 ###安装Nerdtree
 进入正题，[nerdtree](https://github.com/scrooloose/nerdtree)插件安装非常方便，在终端执行命令
