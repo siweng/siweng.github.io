@@ -160,3 +160,32 @@ debug.opendns.com.	0	IN	TXT	"dnscrypt enabled (7165343751484877)"
 ;; MSG SIZE  rcvd: 222
 {% endhighlight %}
 
+恭喜，我们成功了，下一步我们只需要把本机的dns服务器指向到这台代理即可。再来查看下`www.dropbox.com`的解析情况
+
+{% highlight bash %}
+[root@AY140601130849615931Z dnscrypt-proxy-1.4.0]# dig www.dropbox.com @localhost
+
+; <<>> DiG 9.8.2rc1-RedHat-9.8.2-0.23.rc1.el6_5.1 <<>> www.dropbox.com @localhost
+;; global options: +cmd
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 33610
+;; flags: qr rd ra; QUERY: 1, ANSWER: 3, AUTHORITY: 0, ADDITIONAL: 1
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 4096
+;; QUESTION SECTION:
+;www.dropbox.com.		IN	A
+
+;; ANSWER SECTION:
+www.dropbox.com.	49	IN	CNAME	www-router.dropbox.com.
+www-router.dropbox.com.	49	IN	CNAME	www.v.dropbox.com.
+www.v.dropbox.com.	7	IN	A	108.160.165.147
+
+;; Query time: 164 msec
+;; SERVER: 127.0.0.1#53(127.0.0.1)
+;; WHEN: Sun Jun 22 17:15:30 2014
+;; MSG SIZE  rcvd: 105
+{% endhighlight  %}
+
+访问以下 https://www.dropbox.com
+<img src="/images/2014-06-22/dropbox.png" alt="dropbox" />
