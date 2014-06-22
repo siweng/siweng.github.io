@@ -40,9 +40,9 @@ cd ~/.vim/bundle
 git clone https://github.com/jistr/vim-nerdtree-tabs.git
 {% endhighlight %}
 添加快捷键映射至`~/.vimrc`配置文件中
-{% hightlight bash %}
+{% highlight bash %}
 map <Leader>n <plug>NERDTreeTabsToggle<CR>
-{% endhilight %}
+{% endhighlight %}
 重启Vim， 按住`\+n`键呼出目录树，但此目录树可以在多个tab中共用，表现一致。
 
 
