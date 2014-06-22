@@ -49,6 +49,18 @@ map <Leader>n <plug>NERDTreeTabsToggle<CR>
 如果你使用git做项目版本管理的话，建议安装[git-nerdtree](https://github.com/Xuyuanp/git-nerdtree)
 官方的效果图：
 <img src="https://camo.githubusercontent.com/3fe0388df11cb787f36e1fa108398fd3f757eef4/687474703a2f2f692e696d6775722e636f6d2f6a534377476a552e6769663f31" alt="git-nerdtree" />
-
-
+执行以下命令安装
+{% hightlight bash %}
+cd ~/.vim/bundle
+git clone https://github.com/Xuyuanp/git-nerdtree.git
+{% endhighlight%}
+重启vim之后，nerdtree目录树文件前面多了一些标示符，各个标识符的含义
+* `✭` / `*` : Untracked
+* `✹` / `~` : Modified in the working tree
+* `✚` / `+` : Staged in the index (Exclude Renamed status)
+* `➜` / `»` : Renamed
+* `═` / `=` : Unmerged
+* `✖` / `-` : Deleted (This indicator can't be shown, as NERDTree doesn't display deleted files. I have no prefect idea to solve this problem currently.)
+* `✗` / `×` : Dirty (Only for directory)
+* `✔` / `ø` : Clean (Only for root directory)
 
